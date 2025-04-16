@@ -16,13 +16,18 @@ public class Main {
             v.add(tmp);
         }
         Collections.sort(v, new ConfComparator());
-        int cnt = n;
-        for(int i = 0; i < n; i++){
-            System.out.println(v.elementAt(i).start + " " + v.elementAt(i).end);
-            for(int j = 1; j >= 0; j++){
-
+        PriorityQueue<Integer> dq = new PriorityQueue<>();
+        dq.add(v.elementAt(0).end);
+        for(int i = 1; i < n; i++){
+            int nstart = v.elementAt(i).start;
+            int nend = v.elementAt(i).end;
+            int pend = dq.peek();
+            if(nstart>=pend){
+                dq.poll();
             }
+            dq.add(nend);
         }
+        System.out.println(dq.size());
     }
     
 }
@@ -37,9 +42,6 @@ class Conf {
 }
 
 class ConfComparator implements Comparator<Conf> {
-    public int compare(Conf a, Conf b){
-        if(a.start == b.start){
-            return a.end-b.end;
-        } else return a.start-b.start;
+    public int compare(Conf a, Conf b){return a.start-b.start;
     }
 }
