@@ -9,7 +9,7 @@ public class Main {
         if(arr[putindex] == startindex) return 1;
         if(arr[putindex] == 0) return 0;
         visited[putindex] = 1;
-        return isCircle(startindex, arr[putindex]); 
+        return isCircle(startindex, arr[putindex]);
     }
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -11,6 +11,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         Vector<String> a = new Vector<>();
+        String c = "12344";
+        HashSet<String> hashSet = new HashSet<>();
+
+        Stack<Character> s = new Stack<>();
         for(int i = 0; i < n; i++){
             
             String tmp = br.readLine();
