@@ -86,12 +86,12 @@ public class Main {
                     }
                     for(int l = 0; l < n; l++){
                         for(int o = 0; o < m; o++){
-                            System.out.print(newMap[l][o]+ " ");
+                            // System.out.print(newMap[l][o]+ " ");
                             if(newMap[l][o] == 0) cnt++;
                         }
-                        System.out.println();
+                        // System.out.println();
                     }
-                    System.out.println();
+                    // System.out.println();
                     if(cnt > ans) ans = cnt;
                 }
             }
