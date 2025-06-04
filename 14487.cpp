@@ -8,6 +8,7 @@ int main(){
     cout.tie(0);
     int n; cin >> n;
     vector<int> v;
+    queue<int> q;
     for(int i = 0; i < n; i++){
         int tmp; cin >> tmp;
         v.push_back(tmp);
